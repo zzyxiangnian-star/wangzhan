@@ -110,9 +110,12 @@ export const Header: React.FC = () => {
       }`}
     >
       <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-5 sm:px-10">
-        <Link to="/" className="flex items-baseline gap-2" aria-label="Tyria Lighting home">
-          <span className="font-display text-[20px] font-medium tracking-[-0.04em] text-ink">Tyria</span>
-          <span className="micro hidden sm:inline">Lighting</span>
+        <Link to="/" className="flex items-center whitespace-nowrap shrink-0" aria-label="Tyria Lighting home">
+          <img
+            src="/assets/tyria-logo.png"
+            alt="Tyria Lighting"
+            className="h-9 sm:h-10 w-auto object-contain select-none"
+          />
         </Link>
 
         <nav

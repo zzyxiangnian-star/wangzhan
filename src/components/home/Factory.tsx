@@ -13,6 +13,8 @@ const STATS = [
   ['2', 'Factories in Bao’an'],
 ];
 
+const SILK = [0.22, 1, 0.36, 1] as const;
+
 export function Factory() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
@@ -22,22 +24,48 @@ export function Factory() {
   return (
     <section ref={ref} className="overflow-hidden py-[18vh]">
       <div className="mx-auto max-w-[1600px] px-5 sm:px-10">
-        <div className="micro mb-5">05 — Factory</div>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-8% 0px' }}
+          transition={{ duration: 0.95, ease: SILK }}
+          className="micro mb-5"
+        >
+          05 — Factory
+        </motion.div>
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
-          <h2 className="font-display text-[clamp(36px,4.6vw,76px)] font-normal leading-[1] tracking-[-0.045em] text-ink lg:col-span-7">
+          <motion.h2
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-8% 0px' }}
+            transition={{ duration: 1.05, ease: SILK, delay: 0.08 }}
+            className="font-display text-[clamp(36px,4.6vw,76px)] font-normal leading-[1] tracking-[-0.045em] text-ink lg:col-span-7"
+          >
             Made end to end in Shenzhen.
-          </h2>
-          <p className="max-w-[44ch] text-[15px] leading-relaxed text-graphite lg:col-span-5">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-8% 0px' }}
+            transition={{ duration: 1.05, ease: SILK, delay: 0.16 }}
+            className="max-w-[44ch] text-[15px] leading-relaxed text-graphite lg:col-span-5"
+          >
             LED packaging, SMT, silicone co-extrusion and photometric testing happen under our own roof, so every reel
             ships with a datasheet and IES file you can trust.
-          </p>
+          </motion.p>
         </div>
         <div className="mt-16 grid grid-cols-2 gap-y-10 sm:grid-cols-4">
-          {STATS.map(([n, l]) => (
-            <div key={l}>
+          {STATS.map(([n, l], idx) => (
+            <motion.div
+              key={l}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-8% 0px' }}
+              transition={{ duration: 1.0, ease: SILK, delay: 0.12 + idx * 0.1 }}
+            >
               <div className="font-display text-[clamp(36px,4vw,64px)] font-light tracking-[-0.05em] text-ink">{n}</div>
               <div className="micro mt-2">{l}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -57,11 +85,17 @@ export function Factory() {
         ))}
       </div>
 
-      <div className="mx-auto mt-14 max-w-[1600px] px-5 sm:px-10">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-8% 0px' }}
+        transition={{ duration: 0.95, ease: SILK }}
+        className="mx-auto mt-14 max-w-[1600px] px-5 sm:px-10"
+      >
         <Link to="/about" className="pill-soft">
           Inside the factory
         </Link>
-      </div>
+      </motion.div>
     </section>
   );
 }

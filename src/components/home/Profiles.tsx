@@ -96,10 +96,24 @@ export function Profiles({ products }: { products: Product[] }) {
         <div className="relative mx-auto grid w-full max-w-[1600px] flex-1 grid-cols-1 items-center gap-6 px-5 pt-24 sm:px-10 lg:grid-cols-12">
           {/* Left: the spec readout */}
           <div className="order-2 lg:order-1 lg:col-span-4">
-            <div className="micro mb-5">02 — Profiles</div>
-            <h2 className="mb-10 max-w-[12ch] font-display text-[clamp(30px,3.4vw,56px)] font-normal leading-[1] tracking-[-0.045em] text-ink">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-8% 0px' }}
+              transition={{ duration: 0.95, ease: SILK }}
+              className="micro mb-5"
+            >
+              02 — Profiles
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-8% 0px' }}
+              transition={{ duration: 1.05, ease: SILK, delay: 0.08 }}
+              className="mb-10 max-w-[12ch] font-display text-[clamp(30px,3.4vw,56px)] font-normal leading-[1] tracking-[-0.045em] text-ink"
+            >
               Every profile, drawn to scale.
-            </h2>
+            </motion.h2>
             <div className="relative h-[150px] sm:h-[170px]">
               <AnimatePresence mode="popLayout" initial={false}>
                 <motion.div
@@ -158,12 +172,18 @@ export function Profiles({ products }: { products: Product[] }) {
           </div>
 
           {/* Right: big counter */}
-          <div className="order-3 hidden lg:col-span-3 lg:block lg:text-right">
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-8% 0px' }}
+            transition={{ duration: 1.05, ease: SILK, delay: 0.16 }}
+            className="order-3 hidden lg:col-span-3 lg:block lg:text-right"
+          >
             <div className="font-display text-[clamp(64px,7vw,128px)] font-light leading-none tabular-nums tracking-[-0.06em] text-ink">
               {String(active + 1).padStart(2, '0')}
             </div>
             <div className="micro mt-3">of {items.length} · 3 mm to 50 mm</div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom: the whole range lined up on one baseline, at true relative size */}

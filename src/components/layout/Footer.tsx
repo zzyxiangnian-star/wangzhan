@@ -59,8 +59,10 @@ export const Footer: React.FC = () => {
         {/* Link grid */}
         <div className="py-14 grid grid-cols-2 md:grid-cols-12 gap-10 text-[14px]">
           <div className="col-span-2 md:col-span-5 space-y-5">
-            <div className="flex items-baseline gap-2">
-              <span className="font-display text-[19px] font-medium tracking-[-0.04em] text-[#111111]">Tyria</span>
+            <div className="flex items-baseline gap-2.5">
+              <span className="font-editorial text-[21px] font-normal uppercase tracking-[0.04em] text-[#111111]">
+                TY<span className="italic pr-[0.03em]">R</span>IA
+              </span>
               <span className="spec-label !text-[10px]">Lighting</span>
             </div>
             <div className="space-y-1 leading-relaxed">

@@ -20,6 +20,8 @@ export default {
         },
       },
       fontFamily: {
+        editorial: ['"Bodoni Moda"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        serif: ['"Bodoni Moda"', '"Cormorant Garamond"', 'Georgia', 'serif'],
         display: ['"Inter Tight"', '"Inter"', 'sans-serif'],
         sans: ['"Inter"', 'sans-serif'],
         mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],

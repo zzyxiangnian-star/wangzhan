@@ -18,21 +18,43 @@ export function Families({ products }: { products: Product[] }) {
     <section className="mx-auto max-w-[1600px] px-5 py-[18vh] sm:px-10">
       <div className="mb-14 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
         <div>
-          <div className="micro mb-5">04 — Range</div>
-          <h2 className="max-w-[14ch] font-display text-[clamp(36px,4.6vw,76px)] font-normal leading-[1] tracking-[-0.045em] text-ink">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-8% 0px' }}
+            transition={{ duration: 0.95, ease: SILK }}
+            className="micro mb-5"
+          >
+            04 — Range
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-8% 0px' }}
+            transition={{ duration: 1.05, ease: SILK, delay: 0.08 }}
+            className="max-w-[14ch] font-display text-[clamp(36px,4.6vw,76px)] font-normal leading-[1] tracking-[-0.045em] text-ink"
+          >
             Four families of linear light.
-          </h2>
+          </motion.h2>
         </div>
-        <Link to="/products" className="pill-soft self-start sm:self-auto">
-          All {products.length} models
-        </Link>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-8% 0px' }}
+          transition={{ duration: 0.95, ease: SILK, delay: 0.16 }}
+          className="self-start sm:self-auto"
+        >
+          <Link to="/products" className="pill-soft">
+            All {products.length} models
+          </Link>
+        </motion.div>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
         {FAMILIES.map((f, i) => (
           <motion.div
             key={f.slug}
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: 48 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-10% 0px' }}
             transition={{ duration: 1.1, ease: SILK, delay: (i % 2) * 0.12 }}
@@ -56,13 +78,19 @@ export function Families({ products }: { products: Product[] }) {
                   </svg>
                 </span>
               </div>
-              <div className="mt-5 flex items-start justify-between gap-6 px-1">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-6% 0px' }}
+                transition={{ duration: 0.9, ease: SILK, delay: (i % 2) * 0.12 + 0.12 }}
+                className="mt-5 flex items-start justify-between gap-6 px-1"
+              >
                 <div>
                   <div className="font-display text-[clamp(22px,2vw,30px)] tracking-[-0.03em] text-ink">{f.name}</div>
                   <p className="mt-1.5 max-w-[42ch] text-[14px] leading-relaxed text-graphite">{f.line}</p>
                 </div>
                 <div className="micro whitespace-nowrap pt-2">{count(f.slug)} models</div>
-              </div>
+              </motion.div>
             </Link>
           </motion.div>
         ))}

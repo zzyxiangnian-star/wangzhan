@@ -37,6 +37,12 @@ h1, h2, h3, .font-display {
   letter-spacing: -0.035em;
 }
 
+.font-editorial {
+  font-family: 'Bodoni Moda', 'Cormorant Garamond', Georgia, serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 96;
+}
+
 /* Lenis smooth scroll */
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }

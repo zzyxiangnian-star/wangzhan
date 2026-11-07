@@ -156,34 +156,60 @@ export function Hero() {
 
   return (
     <section ref={ref} className="relative h-[100svh] min-h-[680px] overflow-hidden">
-      {/* Corner micro labels */}
-      <div className="pointer-events-none absolute inset-x-0 top-24 z-20 mx-auto flex max-w-[1600px] justify-between px-5 sm:px-10">
-        <span className="micro">Shenzhen · Est. 2012</span>
-        <span className="micro hidden sm:block">Silicone LED Neon &amp; Linear Light</span>
-      </div>
-      <div className="pointer-events-none absolute inset-x-0 bottom-8 z-20 mx-auto flex max-w-[1600px] items-end justify-between px-5 sm:px-10">
-        <span className="micro hidden sm:block">Scroll to explore</span>
-        <span className="micro hidden sm:block">22°43′N 113°49′E</span>
-      </div>
-
-      {/* Giant wordmark */}
+      {/* Giant wordmark — Editorial High-Contrast Serif (Bodoni Moda) with Italic R */}
       <motion.h1
         style={{ y: markY, opacity: markOpacity }}
-        className="absolute inset-x-0 top-[16%] z-0 sm:top-[13%] flex justify-center overflow-hidden font-display font-light leading-[0.8] tracking-[-0.07em] text-ink"
+        className="font-editorial absolute inset-x-0 top-[15%] z-0 sm:top-[11%] flex items-baseline justify-center overflow-hidden py-[0.05em] font-normal leading-[0.9] text-ink select-none"
         aria-label="Tyria Lighting"
       >
-        {letters.map((l, i) => (
-          <motion.span
-            key={i}
-            initial={{ y: '105%' }}
-            animate={{ y: '0%' }}
-            transition={{ duration: 1.4, ease: SILK, delay: 0.1 + i * 0.07 }}
-            className="inline-block text-[clamp(120px,27vw,520px)]"
-            aria-hidden
-          >
-            {l}
-          </motion.span>
-        ))}
+        <motion.span
+          initial={{ opacity: 0, letterSpacing: '-0.068em', filter: 'blur(6px)' }}
+          animate={{ opacity: 1, letterSpacing: '-0.015em', filter: 'blur(0px)' }}
+          transition={{
+            opacity: { duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.08 },
+            letterSpacing: { duration: 2.7, ease: [0.16, 1, 0.3, 1], delay: 0.08 },
+            filter: { duration: 2.0, ease: SILK, delay: 0.08 },
+          }}
+          className="inline-flex items-baseline justify-center"
+        >
+          {letters.map((l, i) => {
+            const centerOffset = i - (letters.length - 1) / 2;
+            const kerning =
+              l === 'T'
+                ? 'mr-[-0.025em]'
+                : l === 'Y'
+                  ? 'mr-[-0.018em]'
+                  : l === 'R'
+                    ? 'italic font-normal ml-[-0.012em] pr-[0.044em]'
+                    : l === 'I'
+                      ? 'mr-[-0.01em]'
+                      : '';
+            return (
+              <motion.span
+                key={i}
+                initial={{
+                  opacity: 0,
+                  y: '18%',
+                  x: `${centerOffset * -0.042}em`,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: '0%',
+                  x: '0em',
+                }}
+                transition={{
+                  opacity: { duration: 1.95, ease: [0.16, 1, 0.3, 1], delay: 0.1 + i * 0.08 },
+                  y: { duration: 2.25, ease: [0.16, 1, 0.3, 1], delay: 0.1 + i * 0.08 },
+                  x: { duration: 2.7, ease: [0.16, 1, 0.3, 1], delay: 0.08 },
+                }}
+                className={`inline-block text-[clamp(110px,24.5vw,470px)] will-change-transform ${kerning}`}
+                aria-hidden
+              >
+                {l}
+              </motion.span>
+            );
+          })}
+        </motion.span>
       </motion.h1>
 
       {/* 3D arc carousel */}

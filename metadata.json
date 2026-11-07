@@ -1,0 +1,8 @@
+{
+  "name": "TYRIA LIGHTING",
+  "description": "Specialized LED Strip & Silicone Neon Flex manufacturer since 2012 — engineered for lighting designers. 50+ profiles, 259 IES/LDT photometric files, Dow SILASTIC™ silicone, SDCM ≤ 3, UGR < 19.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
