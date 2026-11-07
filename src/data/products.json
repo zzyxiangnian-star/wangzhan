@@ -2555,8 +2555,8 @@
     "id": "neon-flex-360-r13-ty-nr13v24px-c",
     "family": "LED Neon Flex",
     "familySlug": "neon-flex",
-    "series": "360° Round",
-    "seriesSlug": "360-round",
+    "series": "360° Emitting",
+    "seriesSlug": "360-emitting",
     "model": "360° R13",
     "itemNo": "TY-NR13V24Px-Cx",
     "size": {
@@ -2585,21 +2585,21 @@
       "5000K",
       "6500K"
     ],
-    "ip": "IP68",
+    "ip": "IP65",
     "minBendRadius": 50,
     "minBendDiameter": 100,
-    "cutUnit": "50mm",
+    "cutUnit": "25mm",
     "maxRun": "5m / 10m",
     "warranty": "5 Years",
     "controls": [
       "Single Color"
     ],
-    "pitch": "13×13mm 360° Round architectural silicone neon with Dow SILASTIC™ co-extrusion, SDCM ≤ 3, and 100mm min. bending diameter.",
+    "pitch": "13×13mm 360° Emitting architectural silicone neon with Dow SILASTIC™ co-extrusion, SDCM ≤ 3, and 100mm min. bending diameter.",
     "features": [
       "Dow SILASTIC™ ET-7021 optical-grade silicone co-extrusion — UV, salt mist, and solvent resistant",
       "True 360 light emission with uniform dot-free diffusion and SDCM ≤ 3 (1 Bin)",
       "Minimum bending diameter ≥ 100mm (Radius 50mm) without dark spots",
-      "IP68 ingress protection, customizable production runs up to 30m, 5-year warranty"
+      "IP65 ingress protection, customizable production runs up to 30m, 5-year warranty"
     ],
     "images": {
       "hero": "/assets/products/neon-flex-360-r13-ty-nr13v24px-c/hero.webp",
@@ -2652,8 +2652,8 @@
     "id": "neon-flex-360-r25-ty-nr25v24px-c",
     "family": "LED Neon Flex",
     "familySlug": "neon-flex",
-    "series": "360° Round",
-    "seriesSlug": "360-round",
+    "series": "360° Emitting",
+    "seriesSlug": "360-emitting",
     "model": "360° R25",
     "itemNo": "TY-NR25V24Px-Cx",
     "size": {
@@ -2696,7 +2696,7 @@
       "RGB",
       "RGBW"
     ],
-    "pitch": "25×25mm 360° Round architectural silicone neon with Dow SILASTIC™ co-extrusion, SDCM ≤ 3, and 300mm min. bending diameter.",
+    "pitch": "25×25mm 360° Emitting architectural silicone neon with Dow SILASTIC™ co-extrusion, SDCM ≤ 3, and 300mm min. bending diameter.",
     "features": [
       "Dow SILASTIC™ ET-7021 optical-grade silicone co-extrusion — UV, salt mist, and solvent resistant",
       "True 360 light emission with uniform dot-free diffusion and SDCM ≤ 3 (1 Bin)",
@@ -2818,8 +2818,8 @@
     "id": "neon-flex-360-r40-ty-nr40v24px-c",
     "family": "LED Neon Flex",
     "familySlug": "neon-flex",
-    "series": "360° Round",
-    "seriesSlug": "360-round",
+    "series": "360° Emitting",
+    "seriesSlug": "360-emitting",
     "model": "360° R40",
     "itemNo": "TY-NR40V24Px-Cx",
     "size": {
@@ -2860,7 +2860,7 @@
       "RGB",
       "RGBW"
     ],
-    "pitch": "40×40mm 360° Round architectural silicone neon with Dow SILASTIC™ co-extrusion, SDCM ≤ 3, and 300mm min. bending diameter.",
+    "pitch": "40×40mm 360° Emitting architectural silicone neon with Dow SILASTIC™ co-extrusion, SDCM ≤ 3, and 300mm min. bending diameter.",
     "features": [
       "Dow SILASTIC™ ET-7021 optical-grade silicone co-extrusion — UV, salt mist, and solvent resistant",
       "True 360 light emission with uniform dot-free diffusion and SDCM ≤ 3 (1 Bin)",
@@ -2919,8 +2919,8 @@
     "id": "neon-flex-360-r40-1600k-12000k-ty-nr40v24px-c",
     "family": "LED Neon Flex",
     "familySlug": "neon-flex",
-    "series": "360° Round",
-    "seriesSlug": "360-round",
+    "series": "360° Emitting",
+    "seriesSlug": "360-emitting",
     "model": "360° R40 (1600K-12000K)",
     "itemNo": "TY-NR40V24Px-Cx (1600K-12000K)",
     "size": {
@@ -2960,7 +2960,7 @@
       "DMX512",
       "DALI"
     ],
-    "pitch": "40×40mm 360° Round architectural silicone neon with Dow SILASTIC™ co-extrusion, SDCM ≤ 3, and 300mm min. bending diameter.",
+    "pitch": "40×40mm 360° Emitting architectural silicone neon with Dow SILASTIC™ co-extrusion, SDCM ≤ 3, and 300mm min. bending diameter.",
     "features": [
       "Dow SILASTIC™ ET-7021 optical-grade silicone co-extrusion — UV, salt mist, and solvent resistant",
       "True 360 light emission with uniform dot-free diffusion and SDCM ≤ 3 (1 Bin)",
@@ -16463,61 +16463,61 @@
     }
   },
   {
-    "id": "neon-pixel-1615-tv-dmx512",
+    "id": "neon-pixel-1615-tv",
     "family": "LED Neon Flex",
     "familySlug": "neon-flex",
     "series": "Pixel Neon (DMX512 / SPI)",
     "seriesSlug": "pixel-neon",
-    "model": "1615 TV Pixel DMX512 / SPI",
-    "itemNo": "TY-NT1615V24P15-Crgbw-DMX512",
+    "model": "Pixel 1615 TV",
+    "itemNo": "TY-NT1615V24P12-Crgb-WS2818",
     "size": {
-      "w": 16.0,
-      "h": 15.0
+      "w": 16,
+      "h": 15
     },
     "view": "TV",
     "voltage": "DC24V",
     "wattOptions": [
       12,
+      14.5,
       15
     ],
-    "maxLumen": 480,
-    "efficacy": 35,
-    "ledType": "SMD5050 + UCS512 / WS2818",
-    "ledsPerM": 64,
-    "cri": "Ra≥80 (White Ch.)",
-    "sdcm": "SDCM ≤ 3 (1 Bin)",
+    "maxLumen": 342,
+    "efficacy": 23.6,
+    "ledType": "IC UCS2603 / WS2818 / UCS2904 / UCS512C2L",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
     "cctOptions": [
-      "RGB",
-      "RGBW",
-      "DMX512",
-      "SPI"
-    ],
-    "ip": "IP67",
-    "minBendRadius": 80,
-    "minBendDiameter": 160,
-    "cutUnit": "125mm (8 Pixels/m)",
-    "maxRun": "10m",
-    "warranty": "5 Years",
-    "controls": [
-      "DMX512",
-      "SPI Pixel",
       "RGB",
       "RGBW"
     ],
-    "pitch": "16×15mm Top-View addressable pixel silicone neon supporting standard DMX512 (UCS512) and breakpoint-transmission SPI (WS2818/UCS2904).",
+    "ip": "IP67",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "125mm (8 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "Breakpoint SPI",
+      "DMX512",
+      "RGB",
+      "RGBW"
+    ],
+    "pitch": "Addressable top-view pixel silicone neon, 8 pixels per metre, SPI, Breakpoint SPI, DMX512 control.",
     "features": [
-      "Dual-signal breakpoint transmission (WS2818) or differential DMX512 (1990) protocol",
-      "8 pixels/m (125mm cut) or 10 pixels/m (100mm cut) for architectural media facades",
-      "Dow SILASTIC™ ET-7021 optical silicone co-extrusion with IP67 weatherproofing",
-      "Full Specification in Ver.3.0 Catalogue of DMX512 SPI LED Neon Flex"
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP67 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "8 pixels per metre, cut every 125mm",
+      "3-year warranty, working life ≥ 30,000 hours",
+      "Variants: RGB Breakpoint SPI (UCS2603 / WS2818) 12W/m, 262 lm/m; RGBW SPI (UCS2904) 14.5W/m, 342 lm/m; RGB DMX512 (UCS512C2L) 12W/m, 266 lm/m; RGBW DMX512 (UCS512C2L) 15W/m, 329 lm/m"
     ],
     "images": {
-      "hero": "/assets/products/led-sheet-led-sheet-392leds-single-color-ty-st28q392v24/hero.webp",
-      "section": "/assets/products/led-sheet-led-sheet-392leds-single-color-ty-st28q392v24/section.webp",
-      "curve": "/assets/products/led-sheet-led-sheet-392leds-single-color-ty-st28q392v24/curve.webp",
+      "hero": "/assets/products/neon-pixel-1615-tv/hero.webp",
+      "section": "/assets/products/neon-pixel-1615-tv/section.webp",
+      "curve": "/assets/products/neon-pixel-1615-tv/curve.webp",
       "detail": [
-        "/assets/products/led-sheet-led-sheet-392leds-single-color-ty-st28q392v24/detail_1.webp",
-        "/assets/products/led-sheet-led-sheet-392leds-single-color-ty-st28q392v24/detail_2.webp"
+        "/assets/products/neon-pixel-1615-tv/detail_1.webp"
       ]
     },
     "downloads": {
@@ -16528,60 +16528,61 @@
     }
   },
   {
-    "id": "neon-pixel-1220-sv-spi",
+    "id": "neon-pixel-1220-sv",
     "family": "LED Neon Flex",
     "familySlug": "neon-flex",
     "series": "Pixel Neon (DMX512 / SPI)",
     "seriesSlug": "pixel-neon",
-    "model": "1220 SV Pixel DMX512 / SPI",
+    "model": "Pixel 1220 SV",
     "itemNo": "TY-NS1220V24P12-Crgb-WS2818",
     "size": {
-      "w": 12.0,
-      "h": 20.0
+      "w": 12,
+      "h": 20
     },
     "view": "SV",
     "voltage": "DC24V",
     "wattOptions": [
       12,
-      14
+      14.5,
+      15
     ],
-    "maxLumen": 420,
-    "efficacy": 35,
-    "ledType": "SMD5050 + WS2818 / UCS2904",
-    "ledsPerM": 64,
-    "cri": "RGB / RGBW",
-    "sdcm": "1 Bin",
+    "maxLumen": 218,
+    "efficacy": 15.0,
+    "ledType": "IC UCS2603 / WS2818 / UCS2904 / UCS512C2L",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
     "cctOptions": [
       "RGB",
-      "RGBW",
-      "SPI",
-      "DMX512"
+      "RGBW"
     ],
     "ip": "IP67",
-    "minBendRadius": 60,
-    "minBendDiameter": 120,
-    "cutUnit": "125mm (8 Pixels/m)",
-    "maxRun": "10m",
-    "warranty": "5 Years",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "125mm (8 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
     "controls": [
-      "SPI Pixel",
+      "SPI",
+      "Breakpoint SPI",
       "DMX512",
       "RGB",
       "RGBW"
     ],
-    "pitch": "12×20mm Side-View pixel neon for horizontal contours, media signage, and dynamic architectural outlines.",
+    "pitch": "Addressable side-view pixel silicone neon, 8 pixels per metre, SPI, Breakpoint SPI, DMX512 control.",
     "features": [
-      "Horizontal bending (Min. diameter 120mm) ideal for 3D signage and curved facades",
-      "Available in UCS2904 RGBW (14.5W/m) and WS2818 RGB breakpoint-continuous versions",
-      "Dow SILASTIC™ ET-7021 silicone housing with anti-UV and salt-spray durability"
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP67 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "8 pixels per metre, cut every 125mm",
+      "3-year warranty, working life ≥ 30,000 hours",
+      "Variants: RGB Breakpoint SPI (UCS2603 / WS2818) 12W/m, 159 lm/m; RGBW SPI (UCS2904) 14.5W/m, 218 lm/m; RGB DMX512 (UCS512C2L) 12W/m, 161 lm/m; RGBW DMX512 (UCS512C2L) 15W/m, 211 lm/m"
     ],
     "images": {
-      "hero": "/assets/products/led-sheet-led-sheet-392leds-single-color-ty-st28q392v24/hero.webp",
-      "section": "/assets/products/led-sheet-led-sheet-392leds-single-color-ty-st28q392v24/section.webp",
-      "curve": "/assets/products/led-sheet-led-sheet-392leds-single-color-ty-st28q392v24/curve.webp",
+      "hero": "/assets/products/neon-pixel-1220-sv/hero.webp",
+      "section": "/assets/products/neon-pixel-1220-sv/section.webp",
+      "curve": "/assets/products/neon-pixel-1220-sv/curve.webp",
       "detail": [
-        "/assets/products/led-sheet-led-sheet-392leds-single-color-ty-st28q392v24/detail_1.webp",
-        "/assets/products/led-sheet-led-sheet-392leds-single-color-ty-st28q392v24/detail_2.webp"
+        "/assets/products/neon-pixel-1220-sv/detail_1.webp"
       ]
     },
     "downloads": {
@@ -16592,56 +16593,641 @@
     }
   },
   {
-    "id": "neon-pixel-r25-360-spi",
+    "id": "neon-pixel-1225-sv",
     "family": "LED Neon Flex",
     "familySlug": "neon-flex",
     "series": "Pixel Neon (DMX512 / SPI)",
     "seriesSlug": "pixel-neon",
-    "model": "360° R25 Pixel SPI",
-    "itemNo": "TY-NR25V24P12-Crgb-WS2811",
+    "model": "Pixel 1225 SV",
+    "itemNo": "TY-NS1225V24P12-Crgb-WS2818",
     "size": {
-      "w": 25.0,
-      "h": 25.0
+      "w": 12,
+      "h": 25
+    },
+    "view": "SV",
+    "voltage": "DC24V",
+    "wattOptions": [
+      12,
+      14.5,
+      15
+    ],
+    "maxLumen": 208,
+    "efficacy": 13.9,
+    "ledType": "IC UCS2603 / WS2818 / UCS2904 / UCS512C2L",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
+    "cctOptions": [
+      "RGB",
+      "RGBW"
+    ],
+    "ip": "IP67",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "125mm (8 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "Breakpoint SPI",
+      "DMX512",
+      "RGB",
+      "RGBW"
+    ],
+    "pitch": "Addressable side-view pixel silicone neon, 8 pixels per metre, SPI, Breakpoint SPI, DMX512 control.",
+    "features": [
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP67 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "8 pixels per metre, cut every 125mm",
+      "3-year warranty, working life ≥ 30,000 hours",
+      "Variants: RGB Breakpoint SPI (UCS2603 / WS2818) 12W/m, 145 lm/m; RGBW SPI (UCS2904) 14.5W/m, 200 lm/m; RGB DMX512 (UCS512C2L) 12W/m, 148 lm/m; RGBW DMX512 (UCS512C2L) 15W/m, 208 lm/m"
+    ],
+    "images": {
+      "hero": "/assets/products/neon-pixel-1225-sv/hero.webp",
+      "section": "/assets/products/neon-pixel-1225-sv/section.webp",
+      "curve": "/assets/products/neon-pixel-1225-sv/curve.webp",
+      "detail": [
+        "/assets/products/neon-pixel-1225-sv/detail_1.webp"
+      ]
+    },
+    "downloads": {
+      "datasheet": "/downloads/catalogs/cat-pixel-neon-v3.pdf",
+      "ies": [],
+      "ldt": [],
+      "report": []
+    }
+  },
+  {
+    "id": "neon-pixel-1212-tv",
+    "family": "LED Neon Flex",
+    "familySlug": "neon-flex",
+    "series": "Pixel Neon (DMX512 / SPI)",
+    "seriesSlug": "pixel-neon",
+    "model": "Pixel 1212 TV",
+    "itemNo": "TY-NT1212V24P13-Crgb-WS2811",
+    "size": {
+      "w": 12,
+      "h": 12
+    },
+    "view": "TV",
+    "voltage": "DC24V",
+    "wattOptions": [
+      12.5
+    ],
+    "maxLumen": 266,
+    "efficacy": 21.3,
+    "ledType": "IC WS2811",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
+    "cctOptions": [
+      "RGB"
+    ],
+    "ip": "IP67",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "100mm (10 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "RGB"
+    ],
+    "pitch": "Addressable top-view pixel silicone neon, 10 pixels per metre, SPI control.",
+    "features": [
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP67 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "10 pixels per metre, cut every 100mm",
+      "3-year warranty, working life ≥ 30,000 hours"
+    ],
+    "images": {
+      "hero": "/assets/products/neon-pixel-1212-tv/hero.webp",
+      "section": "/assets/products/neon-pixel-1212-tv/section.webp",
+      "curve": "/assets/products/neon-pixel-1212-tv/curve.webp",
+      "detail": [
+        "/assets/products/neon-pixel-1212-tv/detail_1.webp"
+      ]
+    },
+    "downloads": {
+      "datasheet": "/downloads/catalogs/cat-pixel-neon-v3.pdf",
+      "ies": [],
+      "ldt": [],
+      "report": []
+    }
+  },
+  {
+    "id": "neon-pixel-0612-sv",
+    "family": "LED Neon Flex",
+    "familySlug": "neon-flex",
+    "series": "Pixel Neon (DMX512 / SPI)",
+    "seriesSlug": "pixel-neon",
+    "model": "Pixel 0612 SV",
+    "itemNo": "TY-NS0612V24P13-Crgb-WS2811",
+    "size": {
+      "w": 6,
+      "h": 12
+    },
+    "view": "SV",
+    "voltage": "DC24V",
+    "wattOptions": [
+      12.5
+    ],
+    "maxLumen": 162,
+    "efficacy": 13.0,
+    "ledType": "IC WS2811",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
+    "cctOptions": [
+      "RGB"
+    ],
+    "ip": "IP67",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "100mm (10 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "RGB"
+    ],
+    "pitch": "Addressable side-view pixel silicone neon, 10 pixels per metre, SPI control.",
+    "features": [
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP67 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "10 pixels per metre, cut every 100mm",
+      "3-year warranty, working life ≥ 30,000 hours"
+    ],
+    "images": {
+      "hero": "/assets/products/neon-pixel-0612-sv/hero.webp",
+      "section": "/assets/products/neon-pixel-0612-sv/section.webp",
+      "curve": "/assets/products/neon-pixel-0612-sv/curve.webp",
+      "detail": [
+        "/assets/products/neon-pixel-0612-sv/detail_1.webp"
+      ]
+    },
+    "downloads": {
+      "datasheet": "/downloads/catalogs/cat-pixel-neon-v3.pdf",
+      "ies": [],
+      "ldt": [],
+      "report": []
+    }
+  },
+  {
+    "id": "neon-pixel-0817-sv",
+    "family": "LED Neon Flex",
+    "familySlug": "neon-flex",
+    "series": "Pixel Neon (DMX512 / SPI)",
+    "seriesSlug": "pixel-neon",
+    "model": "Pixel 0817 SV",
+    "itemNo": "TY-NS0817V24P13-Crgb-WS2811",
+    "size": {
+      "w": 8,
+      "h": 17
+    },
+    "view": "SV",
+    "voltage": "DC24V",
+    "wattOptions": [
+      12.5
+    ],
+    "maxLumen": 152,
+    "efficacy": 12.2,
+    "ledType": "IC WS2811",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
+    "cctOptions": [
+      "RGB"
+    ],
+    "ip": "IP67",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "100mm (10 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "RGB"
+    ],
+    "pitch": "Addressable side-view pixel silicone neon, 10 pixels per metre, SPI control.",
+    "features": [
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP67 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "10 pixels per metre, cut every 100mm",
+      "3-year warranty, working life ≥ 30,000 hours"
+    ],
+    "images": {
+      "hero": "/assets/products/neon-pixel-0817-sv/hero.webp",
+      "section": "/assets/products/neon-pixel-0817-sv/section.webp",
+      "curve": "/assets/products/neon-pixel-0817-sv/curve.webp",
+      "detail": [
+        "/assets/products/neon-pixel-0817-sv/detail_1.webp"
+      ]
+    },
+    "downloads": {
+      "datasheet": "/downloads/catalogs/cat-pixel-neon-v3.pdf",
+      "ies": [],
+      "ldt": [],
+      "report": []
+    }
+  },
+  {
+    "id": "neon-pixel-1010-tv",
+    "family": "LED Neon Flex",
+    "familySlug": "neon-flex",
+    "series": "Pixel Neon (DMX512 / SPI)",
+    "seriesSlug": "pixel-neon",
+    "model": "Pixel 1010 TV",
+    "itemNo": "TY-NT1010V24P13-Crgb-WS2811",
+    "size": {
+      "w": 10,
+      "h": 10
+    },
+    "view": "TV",
+    "voltage": "DC24V",
+    "wattOptions": [
+      12.5
+    ],
+    "maxLumen": 304,
+    "efficacy": 24.3,
+    "ledType": "IC WS2811",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
+    "cctOptions": [
+      "RGB"
+    ],
+    "ip": "IP67",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "100mm (10 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "RGB"
+    ],
+    "pitch": "Addressable top-view pixel silicone neon, 10 pixels per metre, SPI control.",
+    "features": [
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP67 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "10 pixels per metre, cut every 100mm",
+      "3-year warranty, working life ≥ 30,000 hours"
+    ],
+    "images": {
+      "hero": "/assets/products/neon-pixel-1010-tv/hero.webp",
+      "section": "/assets/products/neon-pixel-1010-tv/section.webp",
+      "curve": "/assets/products/neon-pixel-1010-tv/curve.webp",
+      "detail": [
+        "/assets/products/neon-pixel-1010-tv/detail_1.webp"
+      ]
+    },
+    "downloads": {
+      "datasheet": "/downloads/catalogs/cat-pixel-neon-v3.pdf",
+      "ies": [],
+      "ldt": [],
+      "report": []
+    }
+  },
+  {
+    "id": "neon-pixel-dome-d16-tv",
+    "family": "LED Neon Flex",
+    "familySlug": "neon-flex",
+    "series": "Pixel Neon (DMX512 / SPI)",
+    "seriesSlug": "pixel-neon",
+    "model": "Dome Pixel D16 TV",
+    "itemNo": "TY-NTD16V24P13-Crgb-WS2811",
+    "size": {
+      "w": 16,
+      "h": 15.5
+    },
+    "view": "Dome",
+    "voltage": "DC24V",
+    "wattOptions": [
+      12.5
+    ],
+    "maxLumen": 294,
+    "efficacy": 23.5,
+    "ledType": "IC WS2811",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
+    "cctOptions": [
+      "RGB"
+    ],
+    "ip": "IP67",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "100mm (10 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "RGB"
+    ],
+    "pitch": "Addressable dome top-view pixel silicone neon, 10 pixels per metre, SPI control.",
+    "features": [
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP67 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "10 pixels per metre, cut every 100mm",
+      "3-year warranty, working life ≥ 30,000 hours"
+    ],
+    "images": {
+      "hero": "/assets/products/neon-pixel-dome-d16-tv/hero.webp",
+      "section": "/assets/products/neon-pixel-dome-d16-tv/section.webp",
+      "curve": "/assets/products/neon-pixel-dome-d16-tv/curve.webp",
+      "detail": [
+        "/assets/products/neon-pixel-dome-d16-tv/detail_1.webp"
+      ]
+    },
+    "downloads": {
+      "datasheet": "/downloads/catalogs/cat-pixel-neon-v3.pdf",
+      "ies": [],
+      "ldt": [],
+      "report": []
+    }
+  },
+  {
+    "id": "neon-pixel-dual-1612-sv",
+    "family": "LED Neon Flex",
+    "familySlug": "neon-flex",
+    "series": "Pixel Neon (DMX512 / SPI)",
+    "seriesSlug": "pixel-neon",
+    "model": "Dual Pixel 1612 SV",
+    "itemNo": "TY-NS1612DV24P13-Crgb-WS2811",
+    "size": {
+      "w": 16,
+      "h": 12
+    },
+    "view": "Dual",
+    "voltage": "DC24V",
+    "wattOptions": [
+      12.5
+    ],
+    "maxLumen": 273,
+    "efficacy": 21.8,
+    "ledType": "IC WS2811",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
+    "cctOptions": [
+      "RGB"
+    ],
+    "ip": "IP65",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "100mm (10 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "RGB"
+    ],
+    "pitch": "Addressable dual-side pixel silicone neon, 10 pixels per metre, SPI control.",
+    "features": [
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP65 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "10 pixels per metre, cut every 100mm",
+      "3-year warranty, working life ≥ 30,000 hours"
+    ],
+    "images": {
+      "hero": "/assets/products/neon-pixel-dual-1612-sv/hero.webp",
+      "section": "/assets/products/neon-pixel-dual-1612-sv/section.webp",
+      "curve": "/assets/products/neon-pixel-dual-1612-sv/curve.webp",
+      "detail": [
+        "/assets/products/neon-pixel-dual-1612-sv/detail_1.webp"
+      ]
+    },
+    "downloads": {
+      "datasheet": "/downloads/catalogs/cat-pixel-neon-v3.pdf",
+      "ies": [],
+      "ldt": [],
+      "report": []
+    }
+  },
+  {
+    "id": "neon-pixel-omni-25",
+    "family": "LED Neon Flex",
+    "familySlug": "neon-flex",
+    "series": "Pixel Neon (DMX512 / SPI)",
+    "seriesSlug": "pixel-neon",
+    "model": "Omni Pixel 25 (360°)",
+    "itemNo": "TY-NR25V24P25-Crgb-WS2811",
+    "size": {
+      "w": 25,
+      "h": 25
     },
     "view": "360",
     "voltage": "DC24V",
     "wattOptions": [
-      12,
-      15
+      25
     ],
     "maxLumen": 474,
-    "efficacy": 38,
-    "ledType": "SMD5050 + WS2811",
-    "ledsPerM": 60,
-    "cri": "RGB / RGBW",
-    "sdcm": "1 Bin",
+    "efficacy": 19.0,
+    "ledType": "IC WS2811",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
     "cctOptions": [
-      "RGB",
-      "SPI"
-    ],
-    "ip": "IP65 / IP67",
-    "minBendRadius": 100,
-    "minBendDiameter": 200,
-    "cutUnit": "100mm (10 Pixels/m)",
-    "maxRun": "5m / 10m",
-    "warranty": "5 Years",
-    "controls": [
-      "SPI Pixel",
       "RGB"
     ],
-    "pitch": "Ø25mm 360° omnidirectional pixel neon tube (10 pixels/m, 474 lm/m) for suspended kinetic sculptures and atrium installations.",
+    "ip": "IP65",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "100mm (10 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "RGB"
+    ],
+    "pitch": "Addressable 360° emitting pixel silicone neon, 10 pixels per metre, SPI control.",
     "features": [
-      "360-degree shadow-free radial illumination with 10 addressable pixels per meter",
-      "Compatible with rigid clear tube suspension, pendant cables, and artistic clips",
-      "Dow SILASTIC™ silicone construction rated for commercial and hospitality atriums"
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP65 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "10 pixels per metre, cut every 100mm",
+      "3-year warranty, working life ≥ 30,000 hours"
     ],
     "images": {
-      "hero": "/assets/products/led-sheet-led-sheet-784leds-cct-tunable-ty-st28q784v24/hero.webp",
-      "section": "/assets/products/led-sheet-led-sheet-784leds-cct-tunable-ty-st28q784v24/section.webp",
-      "curve": "/assets/products/led-sheet-led-sheet-784leds-cct-tunable-ty-st28q784v24/curve.webp",
+      "hero": "/assets/products/neon-pixel-omni-25/hero.webp",
+      "section": "/assets/products/neon-pixel-omni-25/section.webp",
+      "curve": "/assets/products/neon-pixel-omni-25/curve.webp",
       "detail": [
-        "/assets/products/led-sheet-led-sheet-784leds-cct-tunable-ty-st28q784v24/detail_1.webp",
-        "/assets/products/led-sheet-led-sheet-784leds-cct-tunable-ty-st28q784v24/detail_2.webp"
+        "/assets/products/neon-pixel-omni-25/detail_1.webp"
+      ]
+    },
+    "downloads": {
+      "datasheet": "/downloads/catalogs/cat-pixel-neon-v3.pdf",
+      "ies": [],
+      "ldt": [],
+      "report": []
+    }
+  },
+  {
+    "id": "neon-pixel-embedded-0612-sv",
+    "family": "LED Neon Flex",
+    "familySlug": "neon-flex",
+    "series": "Pixel Neon (DMX512 / SPI)",
+    "seriesSlug": "pixel-neon",
+    "model": "Embedded Pixel 0612 SV",
+    "itemNo": "TY-NS0612EV24P13-Crgb-WS2811",
+    "size": {
+      "w": 9.5,
+      "h": 12
+    },
+    "view": "Embedded",
+    "voltage": "DC24V",
+    "wattOptions": [
+      12.5
+    ],
+    "maxLumen": 94,
+    "efficacy": 7.5,
+    "ledType": "IC WS2811",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
+    "cctOptions": [
+      "RGB"
+    ],
+    "ip": "IP67",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "100mm (10 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "RGB"
+    ],
+    "pitch": "Addressable embedded pixel silicone neon, 10 pixels per metre, SPI control.",
+    "features": [
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP67 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "10 pixels per metre, cut every 100mm",
+      "3-year warranty, working life ≥ 30,000 hours"
+    ],
+    "images": {
+      "hero": "/assets/products/neon-pixel-embedded-0612-sv/hero.webp",
+      "section": "/assets/products/neon-pixel-embedded-0612-sv/section.webp",
+      "curve": "",
+      "detail": [
+        "/assets/products/neon-pixel-embedded-0612-sv/detail_1.webp"
+      ]
+    },
+    "downloads": {
+      "datasheet": "/downloads/catalogs/cat-pixel-neon-v3.pdf",
+      "ies": [],
+      "ldt": [],
+      "report": []
+    }
+  },
+  {
+    "id": "neon-pixel-embedded-0817-sv",
+    "family": "LED Neon Flex",
+    "familySlug": "neon-flex",
+    "series": "Pixel Neon (DMX512 / SPI)",
+    "seriesSlug": "pixel-neon",
+    "model": "Embedded Pixel 0817 SV",
+    "itemNo": "TY-NS0817EV24P13-Crgb-WS2811",
+    "size": {
+      "w": 10,
+      "h": 17
+    },
+    "view": "Embedded",
+    "voltage": "DC24V",
+    "wattOptions": [
+      12.5
+    ],
+    "maxLumen": 177,
+    "efficacy": 14.2,
+    "ledType": "IC WS2811",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
+    "cctOptions": [
+      "RGB"
+    ],
+    "ip": "IP67",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "100mm (10 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "RGB"
+    ],
+    "pitch": "Addressable embedded pixel silicone neon, 10 pixels per metre, SPI control.",
+    "features": [
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP67 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "10 pixels per metre, cut every 100mm",
+      "3-year warranty, working life ≥ 30,000 hours"
+    ],
+    "images": {
+      "hero": "/assets/products/neon-pixel-embedded-0817-sv/hero.webp",
+      "section": "/assets/products/neon-pixel-embedded-0817-sv/section.webp",
+      "curve": "",
+      "detail": [
+        "/assets/products/neon-pixel-embedded-0817-sv/detail_1.webp"
+      ]
+    },
+    "downloads": {
+      "datasheet": "/downloads/catalogs/cat-pixel-neon-v3.pdf",
+      "ies": [],
+      "ldt": [],
+      "report": []
+    }
+  },
+  {
+    "id": "neon-pixel-embedded-1212-sv",
+    "family": "LED Neon Flex",
+    "familySlug": "neon-flex",
+    "series": "Pixel Neon (DMX512 / SPI)",
+    "seriesSlug": "pixel-neon",
+    "model": "Embedded Pixel 1212",
+    "itemNo": "TY-NT1212EV24P13-Crgb-WS2811",
+    "size": {
+      "w": 17,
+      "h": 12
+    },
+    "view": "Embedded",
+    "voltage": "DC24V",
+    "wattOptions": [
+      12.5
+    ],
+    "maxLumen": 277,
+    "efficacy": 22.2,
+    "ledType": "IC WS2811",
+    "ledsPerM": 0,
+    "cri": "—",
+    "sdcm": "—",
+    "cctOptions": [
+      "RGB"
+    ],
+    "ip": "IP67",
+    "minBendRadius": 0,
+    "minBendDiameter": 0,
+    "cutUnit": "100mm (10 pixels/m)",
+    "maxRun": "—",
+    "warranty": "3 Years",
+    "controls": [
+      "SPI",
+      "RGB"
+    ],
+    "pitch": "Addressable embedded pixel silicone neon, 10 pixels per metre, SPI control.",
+    "features": [
+      "Dow SILASTIC™ ET-7021 silicone, integrated extrusion with a uniform, shadow-free lit face",
+      "IP67 protection, resistant to salt solution, weak acids and alkalis, and UV",
+      "10 pixels per metre, cut every 100mm",
+      "3-year warranty, working life ≥ 30,000 hours"
+    ],
+    "images": {
+      "hero": "/assets/products/neon-pixel-embedded-1212-sv/hero.webp",
+      "section": "/assets/products/neon-pixel-embedded-1212-sv/section.webp",
+      "curve": "",
+      "detail": [
+        "/assets/products/neon-pixel-embedded-1212-sv/detail_1.webp"
       ]
     },
     "downloads": {

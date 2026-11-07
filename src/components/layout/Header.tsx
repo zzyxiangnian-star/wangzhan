@@ -12,7 +12,7 @@ const PRODUCT_MENU = [
     series: [
       { name: 'Top View', slug: 'top-view' },
       { name: 'Side View', slug: 'side-view' },
-      { name: '360° Round', slug: '360-round' },
+      { name: '360° Emitting', slug: '360-emitting' },
       { name: '3D Dual-Bend', slug: '3d-bend' },
       { name: 'Anti-Glare', slug: 'anti-glare' },
       { name: 'Dome & Dual-Side', slug: 'dome' },
