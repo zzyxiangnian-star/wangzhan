@@ -162,6 +162,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ products }
   const { scrollYProgress } = useScroll({ target: galleryRef, offset: ['start start', 'end end'] });
 
   const showPhoto = Boolean(product.images.hero) && !LIGHT_HEROES.has(product.id);
+  const isProfile = product.view === 'Profile';
   const plates: { key: string; tone: 'dark' | 'light' | 'stone'; caption: string; node: React.ReactNode }[] = [
     showPhoto
       ? {
@@ -183,7 +184,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ products }
           ),
         },
     ...(product.images.section
-      ? [{ key: 'section', tone: 'light' as const, caption: 'Dimensions', node: <img src={product.images.section} alt={`${product.model} dimensions`} loading="lazy" className="h-full w-full object-contain p-6" /> }]
+      ? [{ key: 'section', tone: 'light' as const, caption: isProfile ? 'Catalogue page' : 'Dimensions', node: <img src={product.images.section} alt={`${product.model} dimensions`} loading="lazy" className="h-full w-full object-contain p-6" /> }]
       : []),
     ...(product.images.curve
       ? [{ key: 'curve', tone: 'light' as const, caption: 'Light distribution', node: <img src={product.images.curve} alt={`${product.model} light distribution`} loading="lazy" className="h-full w-full object-contain p-6" /> }]
@@ -191,12 +192,12 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ products }
     ...product.images.detail.slice(0, 2).map((src, k) => ({
       key: `d${k}`,
       tone: 'light' as const,
-      caption: k === 0 ? 'Installation' : 'Details',
-      node: <img src={src} alt={`${product.model} detail ${k + 1}`} loading="lazy" className="h-full w-full object-contain p-6" />,
+      caption: isProfile ? 'In situ' : k === 0 ? 'Installation' : 'Details',
+      node: <img src={src} alt={`${product.model} detail ${k + 1}`} loading="lazy" className={`h-full w-full ${isProfile ? 'object-cover' : 'object-contain p-6'}`} />,
     })),
   ];
 
-  const isLinear = product.view !== 'Sheet';
+  const isLinear = product.view !== 'Sheet' && !isProfile;
   const keyNumbers = [
     product.maxLumen ? { v: product.maxLumen, s: '', l: isLinear ? 'Max lm / m' : 'Max lumen' } : null,
     product.efficacy ? { v: product.efficacy, s: '', l: 'lm / W' } : null,
@@ -206,8 +207,10 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ products }
 
   const specRows: [string, string][] = [
     ['Part number', product.itemNo],
-    ['Size', product.view === '360' ? `Ø ${product.size.w} mm` : `${product.size.w} × ${product.size.h} mm`],
-    ['Light output', product.view],
+    ['Size', !product.size.w ? '' : product.view === '360' ? `Ø ${product.size.w} mm` : `${product.size.w} × ${product.size.h} mm`],
+    ['Material', (product as Product & { material?: string }).material ?? ''],
+    ['Light output', isProfile ? '' : product.view],
+    ['CCT', isProfile ? product.cctOptions.join(' / ') : ''],
     ['Voltage', product.voltage],
     ['Power', product.wattOptions.length ? `${product.wattOptions.join(' / ')} W/m` : '—'],
     ['LED', `${product.ledType}${product.ledsPerM ? ` · ${product.ledsPerM}/m` : ''}`],
@@ -215,7 +218,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ products }
     ['Colour consistency', product.sdcm],
     ['Ingress rating', product.ip],
     ['Cut unit', product.cutUnit],
-    ['Max run', product.maxRun],
+    ['Min. bend radius', isProfile && product.minBendRadius ? `${product.minBendRadius} mm` : ''],
+    [isProfile ? 'Available length' : 'Max run', product.maxRun],
     ['Warranty', product.warranty],
   ].filter(([, v]) => v && v !== '—') as [string, string][];
 
@@ -348,6 +352,11 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ products }
 
         {/* 3. Section drawing + full specification */}
         <section className="mt-[14vh] grid gap-10 lg:grid-cols-12">
+          {isProfile ? (
+            <div className="overflow-hidden rounded-card bg-white lg:col-span-5">
+              <img src={product.images.section} alt={`${product.model} catalogue page`} loading="lazy" className="w-full object-contain" />
+            </div>
+          ) : (
           <div className="relative flex min-h-[380px] items-center justify-center overflow-hidden rounded-card bg-paper lg:col-span-5">
             <div
               aria-hidden
@@ -370,6 +379,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ products }
             </motion.div>
             <span className="micro absolute bottom-5 left-5">Cross-section · to scale</span>
           </div>
+          )}
 
           <div className="lg:col-span-7">
             <div className="micro mb-5">Specification</div>
@@ -454,7 +464,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ products }
             return (
               <Link key={r.id} to={`/product/${r.id}`} className="group w-[240px] shrink-0 snap-start sm:w-[280px]">
                 <div className={`relative aspect-[4/5] overflow-hidden rounded-card ${photo ? 'bg-ink' : 'bg-stone/70'}`}>
-                  {photo ? (
+                  {photo || r.view === 'Profile' ? (
                     <img src={r.images.hero} alt={r.model} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] ease-silk group-hover:scale-[1.06]" />
                   ) : (
                     <div className="flex h-full items-center justify-center text-ink">

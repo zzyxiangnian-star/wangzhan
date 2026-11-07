@@ -37,7 +37,7 @@ export function Closing() {
           <Link to="/contact" className="pill h-12 bg-canvas px-7 text-ink hover:scale-[1.03]">
             Contact us
           </Link>
-          <Link to="/downloads" className="pill h-12 bg-canvas/10 px-7 text-canvas hover:bg-canvas/20">
+          <Link to="/resources/catalogs" className="pill h-12 bg-canvas/10 px-7 text-canvas hover:bg-canvas/20">
             Download catalogues
           </Link>
         </motion.div>

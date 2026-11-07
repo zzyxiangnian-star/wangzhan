@@ -3,6 +3,7 @@ import plainHeroes from '../data/plain_heroes.json';
 
 // Products whose only photo is a datasheet shot on white. They go after the studio photos.
 const PLAIN = new Set<string>(plainHeroes);
+const rank = (p: { id: string; familySlug: string }) => (p.familySlug === 'aluminum-profile' ? 2 : PLAIN.has(p.id) ? 1 : 0);
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
 import { Product } from '../types/product';
@@ -20,6 +21,7 @@ const FAMILIES = [
   { slug: 'led-strip', label: 'LED Strip', title: 'LED Strip' },
   { slug: 'wall-grazer', label: 'Wall Grazer', title: 'Wall Grazer' },
   { slug: 'led-sheet', label: 'LED Sheet', title: 'Backlit LED Sheet' },
+  { slug: 'aluminum-profile', label: 'Aluminum Profile', title: 'Aluminum Profile' },
 ];
 
 const VIEWS = ['TV', 'SV', '360', '3D', 'Dome', 'Dual', 'Embedded', 'Anti-Glare', 'COB', 'Strip'];
@@ -33,7 +35,7 @@ const CONTROLS = [
 ];
 
 const sizeLabel = (p: Product) =>
-  p.view === '360' ? `Ø ${p.size.w} mm` : p.view === 'Sheet' ? `${p.size.w} × ${p.size.h} mm` : `${p.size.w} × ${p.size.h} mm`;
+  !p.size.w ? '—' : p.view === '360' ? `Ø ${p.size.w} mm` : p.view === 'Sheet' ? `${p.size.w} × ${p.size.h} mm` : `${p.size.w} × ${p.size.h} mm`;
 
 function Chip({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
   return (
@@ -80,9 +82,11 @@ function ProductCard({ p, onAdd }: { p: Product; onAdd: () => void }) {
         {/* X-ray: a frosted sheet rises on hover with the true-scale section and key numbers */}
         <div className="absolute inset-x-3 bottom-3 translate-y-[calc(100%+16px)] rounded-[22px] bg-canvas/85 p-4 text-ink opacity-0 backdrop-blur-xl transition-all duration-700 ease-silk group-hover:translate-y-0 group-hover:opacity-100">
           <div className="flex items-center gap-4">
-            <div className="grid h-16 w-20 shrink-0 place-items-center">
-              <ProfileCrossSectionSVG w={p.size.w} h={p.size.h} view={p.view} scale={2} showDimensions={false} />
-            </div>
+            {p.view !== 'Profile' && (
+              <div className="grid h-16 w-20 shrink-0 place-items-center">
+                <ProfileCrossSectionSVG w={p.size.w} h={p.size.h} view={p.view} scale={2} showDimensions={false} />
+              </div>
+            )}
             <dl className="grid flex-1 grid-cols-2 gap-x-3 gap-y-1.5 text-[12px]">
               <div>
                 <dt className="micro !text-[9.5px]">Size</dt>
@@ -92,25 +96,34 @@ function ProductCard({ p, onAdd }: { p: Product; onAdd: () => void }) {
                 <dt className="micro !text-[9.5px]">Power</dt>
                 <dd>{p.wattOptions.length ? `${p.wattOptions.slice(0, 3).join(' / ')} W/m` : '—'}</dd>
               </div>
-              <div>
-                <dt className="micro !text-[9.5px]">Voltage</dt>
-                <dd>{p.voltage}</dd>
-              </div>
-              <div>
-                <dt className="micro !text-[9.5px]">Rating</dt>
-                <dd>{p.ip}</dd>
-              </div>
+              {p.view === 'Profile' ? (
+                <div className="col-span-2">
+                  <dt className="micro !text-[9.5px]">Length</dt>
+                  <dd>{p.maxRun !== '—' ? p.maxRun : 'Custom'}</dd>
+                </div>
+              ) : (
+                <>
+                  <div>
+                    <dt className="micro !text-[9.5px]">Voltage</dt>
+                    <dd>{p.voltage}</dd>
+                  </div>
+                  <div>
+                    <dt className="micro !text-[9.5px]">Rating</dt>
+                    <dd>{p.ip}</dd>
+                  </div>
+                </>
+              )}
             </dl>
           </div>
         </div>
 
-        <span
+        {p.ip && <span
           className={`absolute left-4 top-4 rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-[0.08em] backdrop-blur-md ${
             showPhoto ? 'bg-ink/45 text-canvas/90' : 'bg-canvas/70 text-graphite'
           }`}
         >
           {p.ip}
-        </span>
+        </span>}
       </Link>
       <div className="flex items-start justify-between gap-4 px-1 pt-4">
         <div className="min-w-0">
@@ -178,7 +191,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ products }) => {
           if (!hay.includes(query.trim().toLowerCase())) return false;
         }
         return true;
-      }).sort((a, b) => Number(PLAIN.has(a.id)) - Number(PLAIN.has(b.id))),
+      }).sort((a, b) => rank(a) - rank(b)),
     [products, family, series, view, ip, control, maxWidth, query],
   );
 

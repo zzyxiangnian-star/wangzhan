@@ -11,21 +11,23 @@ const COLUMNS = [
       { label: 'LED Strip', to: '/products/led-strip' },
       { label: 'Wall Grazer', to: '/products/wall-grazer' },
       { label: 'Backlit LED Sheet', to: '/products/led-sheet' },
+      { label: 'Aluminum Profile', to: '/products/aluminum-profile' },
     ],
   },
   {
     title: 'Resources',
     links: [
-      { label: 'Datasheets', to: '/downloads' },
-      { label: 'IES & LDT Files', to: '/downloads' },
-      { label: 'Catalogues', to: '/downloads' },
+      { label: 'Datasheets & Manuals', to: '/resources/datasheets' },
+      { label: 'IES File & Test Report', to: '/resources/ies' },
+      { label: 'Catalogs', to: '/resources/catalogs' },
     ],
   },
   {
     title: 'Company',
     links: [
       { label: 'About', to: '/about' },
-      { label: 'Contact', to: '/contact' },
+      { label: 'Application', to: '/application' },
+      { label: 'Contact us', to: '/contact' },
     ],
   },
 ];
@@ -56,47 +58,60 @@ export const Footer: React.FC = () => {
           </div>
         </div>}
 
-        {/* Link grid */}
-        <div className="py-14 grid grid-cols-2 md:grid-cols-12 gap-10 text-[14px]">
-          <div className="col-span-2 md:col-span-5 space-y-5">
-            <div className="flex items-baseline gap-2.5">
-              <span className="font-editorial text-[21px] font-normal uppercase tracking-[0.04em] text-[#111111]">
-                TY<span className="italic pr-[0.03em]">R</span>IA
-              </span>
-              <span className="spec-label !text-[10px]">Lighting</span>
-            </div>
-            <div className="space-y-1 leading-relaxed">
-              <div><a href="mailto:info@tyrialight.com" className="text-[#111111] hover:opacity-60 transition-opacity">info@tyrialight.com</a></div>
-              <div><a href="tel:+8675536931652" className="hover:text-[#111111] transition-colors">+86 755 3693 1652</a></div>
-              <div>
-                <a href="https://wa.me/8618938693458" target="_blank" rel="noreferrer" className="hover:text-[#111111] transition-colors">
-                  WhatsApp +86 189 3869 3458
-                </a>
-              </div>
-            </div>
-            <div className="space-y-3 max-w-[46ch] text-[13px] leading-relaxed">
-              <p>
-                <span className="spec-label block mb-1">Factory 01 · HQ</span>
-                Antonio Technology Park, Shajing, Bao&apos;an, Shenzhen, China
-              </p>
-              <p>
-                <span className="spec-label block mb-1">Factory 02</span>
-                Shancheng Industrial Zone, Shiyan, Bao&apos;an, Shenzhen, China
-              </p>
-            </div>
+        {/* Brand + link grid */}
+        <div className="grid grid-cols-2 gap-10 pb-10 pt-14 text-[14px] md:grid-cols-12">
+          <div className="col-span-2 md:col-span-4">
+            <Link to="/" aria-label="Tyria Lighting home" className="inline-block">
+              <img src="/assets/tyria-logo.png" alt="Tyria Lighting" className="h-14 w-auto select-none" />
+            </Link>
+            <p className="mt-5 max-w-[32ch] text-[14px] leading-relaxed">
+              LED neon flex, LED strip and linear lighting, made in Shenzhen since 2012.
+            </p>
           </div>
           {COLUMNS.map((col, i) => (
-            <div key={col.title} className={`md:col-span-2 space-y-4 ${i === 0 ? 'md:col-start-7' : ''}`}>
+            <div key={col.title} className={`space-y-4 md:col-span-2 ${i === 0 ? 'md:col-start-7' : ''}`}>
               <div className="spec-label">{col.title}</div>
               <ul className="space-y-2">
                 {col.links.map((l) => (
                   <li key={l.label}>
-                    <Link to={l.to} className="text-[#111111] hover:opacity-60 transition-opacity">
+                    <Link to={l.to} className="text-[#111111] transition-opacity hover:opacity-60">
                       {l.label}
                     </Link>
                   </li>
                 ))}
               </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Contact: one tile per channel, then the two factories side by side */}
+        <div className="grid grid-cols-1 gap-3 pb-6 sm:grid-cols-3 md:grid-cols-6">
+          {[
+            { k: 'Email', v: 'info@tyrialight.com', href: 'mailto:info@tyrialight.com' },
+            { k: 'Phone', v: '+86 755 3693 1652', href: 'tel:+8675536931652' },
+            { k: 'WhatsApp', v: '+86 189 3869 3458', href: 'https://wa.me/8618938693458' },
+          ].map((c) => (
+            <a
+              key={c.k}
+              href={c.href}
+              target={c.k === 'WhatsApp' ? '_blank' : undefined}
+              rel="noreferrer"
+              className="group flex items-end justify-between rounded-[24px] bg-paper px-5 py-5 transition-colors duration-500 hover:bg-[#111111] md:col-span-2"
+            >
+              <span>
+                <span className="spec-label block !text-[10px] group-hover:!text-[#F5F4F0]/50">{c.k}</span>
+                <span className="mt-2 block text-[16px] text-[#111111] transition-colors group-hover:text-[#F5F4F0]">{c.v}</span>
+              </span>
+              <span className="text-[#111111] transition-all duration-500 group-hover:translate-x-0.5 group-hover:text-[#F5F4F0]">→</span>
+            </a>
+          ))}
+          {[
+            ['Factory 01 · HQ', 'Antonio Technology Park, Shajing, Bao’an, Shenzhen, China'],
+            ['Factory 02', 'Shancheng Industrial Zone, Shiyan, Bao’an, Shenzhen, China'],
+          ].map(([k, v]) => (
+            <div key={k} className="rounded-[24px] bg-stone/50 px-5 py-5 sm:col-span-3 md:col-span-3">
+              <span className="spec-label block !text-[10px]">{k}</span>
+              <span className="mt-2 block text-[14px] leading-relaxed text-[#111111]">{v}</span>
             </div>
           ))}
         </div>

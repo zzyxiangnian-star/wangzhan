@@ -8,7 +8,8 @@ import { InquiryDrawer } from './components/common/InquiryDrawer';
 import { HomePage } from './pages/HomePage';
 import { ProductsPage } from './pages/ProductsPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
-import { DownloadsPage } from './pages/DownloadsPage';
+import { ResourcePage } from './pages/ResourcePage';
+import { ApplicationPage } from './pages/ApplicationPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { NotFoundPage } from './pages/NotFoundPage';
@@ -44,8 +45,18 @@ const SmoothScroll: React.FC = () => {
 };
 
 const ScrollToTop: React.FC = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useLayoutEffect(() => {
+    if (hash) {
+      // Deep link to a section (e.g. /about#laboratory): wait for the page to lay out, then glide there.
+      const t = window.setTimeout(() => {
+        const el = document.querySelector(hash) as HTMLElement | null;
+        if (!el) return;
+        if (lenis) lenis.scrollTo(el, { offset: -90 });
+        else el.scrollIntoView({ behavior: 'smooth' });
+      }, 120);
+      return () => window.clearTimeout(t);
+    }
     if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual';
     // Lenis may still be gliding towards the previous page's target, so stop it before resetting.
     const top = () => {
@@ -62,7 +73,7 @@ const ScrollToTop: React.FC = () => {
       cancelAnimationFrame(id);
       window.clearTimeout(t);
     };
-  }, [pathname]);
+  }, [pathname, hash]);
   return null;
 };
 
@@ -87,8 +98,8 @@ export const App: React.FC = () => {
                 />
                 <Route path="/products/neon-flex/atlas" element={<Navigate to="/products/neon-flex" replace />} />
                 <Route path="/spec-finder" element={<Navigate to="/products" replace />} />
-                <Route path="/applications" element={<Navigate to="/products" replace />} />
-                <Route path="/designer-hub" element={<Navigate to="/downloads" replace />} />
+                <Route path="/applications" element={<Navigate to="/application" replace />} />
+                <Route path="/designer-hub" element={<Navigate to="/resources" replace />} />
                 <Route
                   path="/products"
                   element={<ProductsPage products={products} />}
@@ -105,7 +116,10 @@ export const App: React.FC = () => {
                   path="/product/:id"
                   element={<ProductDetailPage products={products} />}
                 />
-                <Route path="/downloads" element={<DownloadsPage products={products} catalogs={catalogs} />} />
+                <Route path="/downloads" element={<Navigate to="/resources" replace />} />
+                <Route path="/resources" element={<ResourcePage products={products} catalogs={catalogs} />} />
+                <Route path="/resources/:section" element={<ResourcePage products={products} catalogs={catalogs} />} />
+                <Route path="/application" element={<ApplicationPage products={products} />} />
                 <Route path="/factory" element={<Navigate to="/about" replace />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
