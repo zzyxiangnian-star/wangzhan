@@ -152,7 +152,7 @@ export const Header: React.FC = () => {
           <img
             src="/assets/tyria-logo.png"
             alt="Tyria Lighting"
-            className="h-9 sm:h-10 w-auto object-contain select-none"
+            className="h-10 sm:h-12 w-auto object-contain select-none"
           />
         </Link>
 
